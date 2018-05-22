@@ -52,6 +52,7 @@ def driver_actions(url):
                                 #     if watched == total:
                                 #         c += 1
                                 #         break
+                                # 写上这段速度会快很多but高数作业ddl。。
                                 time.sleep(300)
                                 c += 1
 
