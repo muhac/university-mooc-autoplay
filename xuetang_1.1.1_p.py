@@ -34,7 +34,6 @@ def driver_actions(url):
     log.perform()
 
     await, interval, count = input("Press 'Enter' to start watching -> "), 10, 1
-    browser.switch_to.window(browser.window_handles[-1])
 
     if not await:
         section = input("start from (1.1.1):")
@@ -43,6 +42,8 @@ def driver_actions(url):
         else:
             [a, b, c, *_] = section.split('.')
             a, b, c = int(a), int(b), int(c)
+
+        browser.switch_to.window(browser.window_handles[-1])
 
         while True:
             browser.find_elements_by_partial_link_text(f"第{a}章")[0].click()
