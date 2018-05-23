@@ -18,7 +18,6 @@ def driver_actions(url):
     log.move_to_element_with_offset(element, -20, 0)
     log.click()
     log.send_keys(username)
-    # Move to password.
     element = browser.find_element_by_class_name('icon-lock')
     log.move_to_element_with_offset(element, -20, 0)
     log.click()
@@ -59,8 +58,14 @@ def driver_actions(url):
                                 break
                             else:
                                 current.click()
-                                time.sleep(7)
-                                browser.find_element_by_class_name("xt_video_player_play_btn").click()
+                                while True:
+                                    try:
+                                        time.sleep(7)
+                                        browser.find_element_by_class_name("xt_video_player_play_btn").click()
+                                    except:
+                                        continue
+                                    else:
+                                        break
                                 total = browser.find_element_by_xpath(
                                     "//*[@class='xt_video_player_current_time_display fl']/span[2]").text
                                 print(unit, total)
