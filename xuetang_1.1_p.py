@@ -18,7 +18,7 @@ def driver_actions(url):
         except:
             pass
         else:
-            time.sleep(0.5)
+            time.sleep(1.5)
             break
 
     # Log in actions.
