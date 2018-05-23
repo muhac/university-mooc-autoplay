@@ -98,7 +98,6 @@ def driver_actions(url):
                                         print(total)
                                         break
                                 time.sleep(1)
-                                c += 1
 
     input("Press 'Enter' to exit -> ")
     browser.quit()
