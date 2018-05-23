@@ -17,6 +17,7 @@ def driver_actions(url):
             a, b, c = 1, 1, 1
         else:
             [a, b, c, *_] = section.split('.')
+            a, b, c = int(a), int(b), int(c)
 
         while True:
             browser.find_elements_by_partial_link_text(f"第{a}章")[0].click()
