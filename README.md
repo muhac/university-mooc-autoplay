@@ -11,3 +11,4 @@ ps 理论上油猴脚本更爽 https://greasyfork.org/zh-CN/scripts/98624-学堂
 1. 你需要一只chrome https://www.google.com/chrome/  
 2. 把chromedriver放到本机chrome浏览器文件同目录下 https://sites.google.com/a/chromium.org/chromedriver/downloads
 * 百度云链接：https://pan.baidu.com/s/1WnsTWKCBAhJIBjtiDHyEVA 密码：p706
+#### 史纲全场约10小时
