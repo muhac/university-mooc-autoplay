@@ -6,6 +6,7 @@ ps 理论上油猴脚本更爽 https://greasyfork.org/zh-CN/scripts/98624-学堂
 * 5/23/2018 应jyj要求，，加上自动登录。。把账号密码打在脚本里，如果你敢的话
 * 5/23/2018 智慧树的也能凑合 :)
 * 5/24/2018 打了个包exe  
-* 准备工作  
+
+#### 准备工作  
 1. 你需要一只chrome https://www.google.com/chrome/  
 2. 把chromedriver放到本机chrome浏览器文件同目录下 https://sites.google.com/a/chromium.org/chromedriver/downloads
