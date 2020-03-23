@@ -10,13 +10,13 @@
 2. 下载同版本的&nbsp;[chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)&nbsp;并放到本机&nbsp;chrome.exe&nbsp;文件同目录下
 3. 添加&nbsp;chrome&nbsp;目录到环境变量&nbsp;[Path](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
 
-这些文件我已经打包在&nbsp;Release&nbsp;页面，或者也可以从百度云下载：[链接](https://pan.baidu.com/s/1WnsTWKCBAhJIBjtiDHyEVA)，密码：p706&emsp;<sub>最近更新：2018-05-24</sub>
+这些文件我已经打包在百度云：[链接](https://pan.baidu.com/s/1EJzmyc4OxuVnakxAfi5tSQ)，密码：6dah<sub>&emsp;最近更新：2020-03-24</sub>
 
 ## 使用说明
 
 ### 可执行文件
 
-以下自动播放脚本均提供单文件的 `.exe` 可执行文件版本，也可以在&nbsp;Release&nbsp;页面下载。  
+以下自动播放脚本均提供单文件的 `.exe` 可执行文件版本，发布在&nbsp;Release&nbsp;页面，或者也可以从百度云链接里下载。  
 由于平台限制（编译环境：Windows 10 x64），不能保证所有系统通用，如果无法运行，请使用 `.py` 文件执行脚本。
 
 ### 智慧树自动播放脚本
@@ -54,7 +54,7 @@ pip install cryptography
 
 ## 如何贡献
 
-非常欢迎你的加入！[提一个 Issue](https://github.com/bugstop/mooc-autoplay/issues/new) 或者提交一个 Pull Request。
+非常欢迎你：[提一个 Issue](https://github.com/bugstop/mooc-autoplay/issues/new) 或者提交一个 Pull Request
 
 ## 使用许可
 
