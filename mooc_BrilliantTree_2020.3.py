@@ -14,8 +14,7 @@ except ModuleNotFoundError:
     exit(1)
 
 
-def driver_actions(url: str):
-    # 获取用户信息
+def get_user_info() -> (str, str):
     try:
         # 已经保存的用户信息
         with open('USER_INFO') as f_obj:
@@ -48,12 +47,19 @@ def driver_actions(url: str):
         with open('USER_INFO', 'w') as f_obj:
             json.dump(info, f_obj)
 
+    return username, password
+
+
+def driver_actions(url):
+    # 获取用户信息
+    username, password = get_user_info()
+
     browser = webdriver.Chrome()
     browser.get(url)
     browser.maximize_window()
 
     # 登陆界面
-    for _ in range(0):  # for _ in range(3):  现在没法登陆，就直接跳过了
+    for _ in range(1):  # 可以选择自动登录尝试次数
         time.sleep(3)
 
         # 怎么不能自动填充，会被检测出来？？？？？？？
@@ -73,12 +79,13 @@ def driver_actions(url: str):
             break
 
     else:
-        # 三次登陆失败采用手动登陆
+        # 自动登陆失败，采用手动登陆
         input('请手动登陆，然后按任意键继续...')
         browser.find_element_by_class_name('header-enter-school').click()
 
+    # 播放界面
     def popout(select=0):
-        # 播放弹题
+        # 播放过程中弹题
         browser.find_elements_by_class_name('topic-item')[select].click()
         print('    弹题', end='')
 
@@ -132,8 +139,7 @@ def driver_actions(url: str):
                     except:
                         pass
                     finally:
-                        # 当播放完成时进度条消失，播放下一节
-                        break
+                        break  # 当播放完成时进度条消失，播放下一节
 
             else:
                 # 万一卡住了，刷新重试
@@ -150,16 +156,12 @@ def driver_actions(url: str):
     browser.quit()
 
 
-def login():
-    website = 'https://passport.zhihuishu.com/login'
-    driver_actions(website)
-
-
 if __name__ == '__main__':
     print('GitHub: bugstop\n\n'
           '适用于 2020.3 智慧树更新。')
 
     try:
-        login()
+        website = 'https://passport.zhihuishu.com/login'
+        driver_actions(website)
     except EOFError:
         print('你中止了进程。')
