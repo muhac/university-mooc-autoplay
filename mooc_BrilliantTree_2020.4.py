@@ -121,6 +121,7 @@ def driver_actions(url):
                 pass
             finally:
                 video.click()
+                time.sleep(10)  # 防止进度条还没加载出来
 
             for _ in range(300):  # 为了防止卡关，设置50分钟上限
                 time.sleep(10)
